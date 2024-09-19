@@ -3,8 +3,10 @@ import { fetchEployeeById, updateEployeeById } from './lib/data'
 export default async function Home() {
   const data1 = await updateEployeeById(
     'e40bca81-b8b4-416a-8ce8-7c7e60432a51',
-    { name: '任萍', age: 17, department: 'Engineering' }
+    { name: 'chendie', age: 17, department: 'Engineering' }
   )
+
+  console.log(data1)
   const data = await fetchEployeeById('e40bca81-b8b4-416a-8ce8-7c7e60432a51')
   console.log('查询内容', data)
   return (
